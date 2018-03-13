@@ -127,22 +127,18 @@
     }
  }
  /**** SOURCE/ SRCSET ****/
-.img {
-  background: url('images/hands.jpg');
-  background: 
-    -webkit-image-set(
-      url(images/hands_2-384.jpg) 1x,
-      url(images/hands.jpg-775.jpg) 2x,
-    );
-  background-image: 
-    image-set(
-      url(images/hands_2-384.jpg) 1x,
-      url(images/hands.jpg-775.jpg) 2x,
-    );
+ .img {
+  background-image: url(images/hands_2-384.jpg); 
+}
+@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+  .img {
+    background-image: url(images/hands.jpg);
+  }
 }
 
- 
- @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
      .container {
          width: 95%;
      }
